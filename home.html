@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <nav>
+        <div class="logo">PasswordGenerator</div>
+        <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rest of the code -->
+
+    <div class="container"> <!--This container will have all the feature of our generator-->
+        <h2>Generate a Random Password</h2><br>
+
+        <div class="result_container"> <!--Password Generated will be shown here-->
+
+            <span class="result"></span> <!--show password in span tag-->
+
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"></i>  <!--Copy logo-->
+            </button> <!--Copy to clipboard button-->
+        </div>
+        <div class="settings"> <!--Will contain all the setting-->
+
+            <div class="setting"> <!--Here we will have password length-->
+                <label>Password length</label>
+
+                <input type="number" id="length" min="6" max="20" value="20" />
+                <!--min and max length/letter  of password, default = value = 20-->
+
+            </div>
+
+            <div class="setting">
+                <label>Include Upper Case</label>
+
+                <input type="checkbox" id="uppercase" checked />
+            </div>
+
+            <div class="setting">
+                <label>Include Lower Case</label>
+
+                <input type="checkbox" id="lowercase" checked />
+            </div>
+
+
+            <div class="setting">
+                <label>Include Number</label>
+
+                <input type="checkbox" id="number" checked />
+            </div>
+
+
+            <div class="setting">
+                <label>Include Symbols</label>
+
+                <input type="checkbox" id="symbols" checked />
+            </div>
+
+
+
+
+
+        </div>
+
+        <button class="btn btn-large" id="generate">Generate Password</button>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
